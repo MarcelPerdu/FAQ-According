@@ -14,6 +14,7 @@ body {
   background-size: 100%;
   position: relative;
   font-family: Work Sans;
+  background-color: #faeeff;
 }
 
 /*card style*/
@@ -48,10 +49,20 @@ ul {
 li {
   list-style-type: none;
   margin: 1rem 0 0 0;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  transition: all 0.2s linear;
+}
+
+li:hover {
+  background-color: rgb(232, 238, 244);
+  cursor: pointer;
 }
 
 /*title of list in the card body style*/
-h6 {
+.p-list {
+  color: black;
+  font-size: 1rem;
   margin: 0;
   font-weight: 600;
 }
@@ -73,6 +84,10 @@ p {
   font-size: 16px;
   color: hsl(292, 16%, 49%);
   margin: 1rem 0 1rem 0;
+}
+
+p:hover {
+  color: rgba(0, 0, 0, 0.755);
 }
 
 /*frontend mentor footer style*/
