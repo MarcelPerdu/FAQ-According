@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | FAQ accordion</title>
+
+    <!--font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet" />
+
+    <!--Css file link-->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!--bootstrap links-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="card">
+      <!--card header-->
+      <h1 class="card-header bg-white border-0 p-0">
+        <img src="./assets/images/icon-star.svg" class="mr-2 mb-1" alt="" />FAQs
+      </h1>
+
+      <!--card body-->
+      <main>
+        <ul>
+          <li>
+            <div class="header">
+              <h6>What is Frontend Mentor, and how will it help me?</h6>
+
+              <span
+                class="icon"
+                onclick="showHide('content1'), changeIcon('icon1')">
+                <img id="icon1" src="./assets/images/icon-plus.svg" alt="" />
+              </span>
+            </div>
+            <p id="content1" style="display: none">
+              Frontend Mentor offers realistic coding challenges to help
+              developers improve their frontend coding skills with projects in
+              HTML, CSS, and JavaScript. It's suitable for all levels and ideal
+              for portfolio building.
+            </p>
+          </li>
+
+          <li>
+            <div class="header">
+              <h6>Is Frontend Mentor free?</h6>
+              <span
+                class="icon"
+                onclick="changeIcon('icon2'), showHide('content2')">
+                <img id="icon2" src="./assets/images/icon-plus.svg" alt="" />
+              </span>
+            </div>
+            <p id="content2" style="display: none">
+              Yes, you can use projects completed on Frontend Mentor in your
+              portfolio. It's an excellent way to showcase your skills to
+              potential employers!
+            </p>
+          </li>
+
+          <li>
+            <div class="header">
+              <h6>Can I use Frontend Mentor projects in my portfolio?</h6>
+              <span
+                class="icon"
+                onclick="changeIcon('icon3'), showHide('content3')">
+                <img id="icon3" src="./assets/images/icon-plus.svg" alt="" />
+              </span>
+            </div>
+
+            <p id="content3" style="display: none">
+              Yes, you can use projects completed on Frontend Mentor in your
+              portfolio. It's an excellent way to showcase your skills to
+              potential employers!
+            </p>
+          </li>
+
+          <li>
+            <div class="header">
+              <h6>
+                How can I get help if I'm stuck on a Frontend Mentor challenge?
+              </h6>
+              <span
+                class="icon"
+                onclick="changeIcon('icon4'), showHide('content4')">
+                <img id="icon4" src="./assets/images/icon-plus.svg" alt="" />
+              </span>
+            </div>
+
+            <p id="content4" style="display: none">
+              The best place to get help is inside Frontend Mentor's Discord
+              community. There's a help channel where you can ask questions and
+              seek support from other community members.
+            </p>
+          </li>
+        </ul>
+      </main>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <!--card show content button js code-->
+    <script>
+      function showHide(contentId) {
+        var content = document.getElementById(contentId);
+        if (content.style.display === "none") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      }
+      //function that change the plus icon to mines
+      function changeIcon(iconId, contentId) {
+        var content = document.getElementById(contentId);
+        var icon = document.getElementById(iconId);
+
+        if (icon.src.endsWith("icon-minus.svg")) {
+          icon.src = "./assets/images/icon-plus.svg";
+        } else {
+          icon.src = "./assets/images/icon-minus.svg";
+        }
+      }
+    </script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
